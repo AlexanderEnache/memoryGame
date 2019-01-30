@@ -1,0 +1,10 @@
+.middleContainer {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.child {
+    flex: 1;
+    text-align: center;
+}
