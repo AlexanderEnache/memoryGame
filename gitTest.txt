@@ -1,3 +1,5 @@
 
 
-First commit, Alex
+First commit, Alex	
+
+git push -u origin master
