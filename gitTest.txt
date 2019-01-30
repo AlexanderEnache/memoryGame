@@ -6,7 +6,7 @@ git add .
 
 git commit -m "descriptive message about your addition"
 
-git push -u origin master
+git push
 
 
 
