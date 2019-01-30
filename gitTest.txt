@@ -1,9 +1,15 @@
 
 
-First commit, Alex
+	// After making a change to push
 
-Second commit, Tyler
+git add .
 
-Third commit, Cliff	
+git commit -m "descriptive message about your addition"
 
 git push -u origin master
+
+
+
+	// To pull
+
+git pull
