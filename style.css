@@ -1,9 +1,19 @@
-html {
-    height: 100%;
+
+
+
+.headerContainer{
     width: 100%;
+    height: 10%;
+    margin: 0px;
 }
+
+h4{
+    margin: 0px;
+}
+
 .middleContainer {
     display: flex;
+    height: 80%;
     align-items: space-between;
     justify-content: center;
 }
@@ -14,9 +24,80 @@ html {
 }
 
 
-body {
-    font-family: 'Homemade Apple', cursive;
-    display: flex;
-    align-content: space-between;
+
+.left, .right {
+    display: none;
 }
+
+body {
+    
+    height: 100vh;
+    font-family: 'Homemade Apple', cursive;
+    display: flex; 
+    flex-direction: column;
+    align-content: space-between;
+    background-image: url("wood.jpg");
+    background-size: cover;
+    
+}
+
+
+
+.headerContainer {
+    background-color:#454545;
+    text-align: center;
+}
+
+.card {
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: solid 1px red;
+    display: inline;
+}
+
+
+.bottomContainer {
+    margin-bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7C7760;
+}
+
+.cardContainer {
+    border: solid 1px red;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+
+}
+
+.row{
+
+    width: 100%;
+    height: 24%;
+
+    border: solid 1px red;
+
+}
+
+
 /* comment here */
+
+/* Desktop layout */
+/* @media only screen (min-width: 480px) {
+    .cards {
+        display: flex;
+
+    }
+
+    .cardContainer {
+        height: 50%;
+        width: 50%;
+        border: solid 1px purple;
+    }
+} */
