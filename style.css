@@ -1,5 +1,6 @@
 .middleContainer {
     display: flex;
+    height: 70%;
     align-items: space-between;
     justify-content: center;
 }
@@ -10,7 +11,43 @@
 }
 
 
-body {
-    font-family: 'Homemade Apple', cursive;
+
+.left, .right {
+    display: none;
 }
+
+body {
+    
+    height: 100vh;
+    font-family: 'Homemade Apple', cursive;
+    display: flex; 
+    flex-direction: column;
+    align-content: space-between;
+    background-image: url("wood.jpg");
+    background-size: cover;
+    
+}
+
+
+
+.headerContainer {
+    background-color:#454545;
+    text-align: center;
+}
+
+.middleContainer {
+    
+
+}
+
+
+.bottomContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7C7760;
+
+}
+
+
 /* comment here */
