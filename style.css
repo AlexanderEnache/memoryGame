@@ -58,9 +58,9 @@ h4 {
 
 .card {
     /* border: solid 1px red; */
-    height: 90px;
+    height: 100px;
     width: 70px;
-    margin: 8px;
+    margin: 10px;
 }
 
 
@@ -93,6 +93,7 @@ h4 {
 
     .left, .right {
         display: inline;
+		flex: 3;
         /* border: 1px solid red; */
     }
 
@@ -105,10 +106,12 @@ h4 {
 
     .cards {
         border: solid 1px red;
+		flex: 5;
     }
 
     .card {
         border: solid 1px purple;
+		height: 135px;
     }
 /*leave this here, in case for extra text*/
     /* .left {
@@ -126,6 +129,11 @@ h4 {
     .headerContainer {
         display: flex;
     }
+	
+	.deckContainer{
+		height: 635px;
+		width: 595px;
+	}
 
     h4 {
         padding-left: 40px;
@@ -139,4 +147,7 @@ h4 {
         font-size: 24px;
         padding-top: 2px; 
     }
+	
+	.
+	
 }

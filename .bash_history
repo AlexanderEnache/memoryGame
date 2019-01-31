@@ -21,3 +21,16 @@ cd Users
 cd alex6
 pwd
 setx HOME /c/Users/alex6
+git add .
+git commit -m "No change, just fixing my git"
+git config --global user.email "you@example.com"
+git config --global user.email "ragnarxon@gmail.com"
+git commit -m "No change, just fixing my git"
+git add .
+git commit -m "No change, just fixing my git"
+git add .
+git commit -m "No change, just fixing my git"
+git push
+git log
+git pull
+git pull
