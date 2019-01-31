@@ -4,6 +4,7 @@
     width: 100%;
     height: 10%;
     margin: 0px;
+    
 }
 
 h4{
@@ -16,7 +17,7 @@ h4{
     /*display: flex;
     align-items: center;
     justify-content: center; */
-    border: solid 2px purple;
+    /* border: solid 2px purple; */
 }
 
 .child {
@@ -33,7 +34,7 @@ h4{
 body {
     
     height: 100vh;
-    font-family: 'Homemade Apple', cursive;
+    font-family: 'UnifrakturCook', cursive;
     display: flex; 
     flex-direction: column;
     align-content: space-between;
@@ -42,15 +43,21 @@ body {
     
 }
 
-
+h4 {
+    font-size: 36px;
+    color: black;
+    margin-top: 10px;
+    
+}
 
 .headerContainer {
-    background-color:#454545;
+    background-color:#7C7760;
     text-align: center;
+    border-radius: 3px;
 }
 
 .card {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     height: 90px;
     width: 70px;
     margin: 8px;
@@ -61,12 +68,13 @@ body {
     margin-bottom: 0px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #7C7760;
+    border-radius: 3px;
 }
 
 .deckContainer {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     width: 370px;
     height: 510px;
     display: flex;
