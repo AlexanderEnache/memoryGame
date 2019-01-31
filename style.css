@@ -35,9 +35,10 @@ body {
     text-align: center;
 }
 
-.middleContainer {
-    
-
+.card {
+    width: 75px;
+    height: 90px;
+    border: solid 1px red;
 }
 
 
@@ -49,5 +50,27 @@ body {
 
 }
 
+.cardContainer {
+    border: solid 1px red;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 
 /* comment here */
+
+/* Desktop layout */
+@media only screen (min-width:760px) {
+    .cards {
+        display: flex;
+
+    }
+
+    .cardContainer {
+        height: 50%;
+        width: 50%;
+        border: solid 1px purple;
+    }
+}
