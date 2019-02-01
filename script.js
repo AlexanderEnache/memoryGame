@@ -1,17 +1,8 @@
 
 "use strict";
 
-
-/* class Img(id, name){
-		
-	this.name = name;
-	this.id = id;
-	
-} */
-
-
-
 $(document).ready(function () {
+
     $(".startButton").on("click", function () {
 
         let sec = 31;
@@ -34,6 +25,7 @@ $(document).ready(function () {
             $(".card").css("opacity", "1");
             $(".card").attr("src", "tarotBack.png");
             sec = 31;
+            boardLock = false;
         });
 
 
@@ -42,6 +34,7 @@ $(document).ready(function () {
             $(".Timer").html(sec);
             if (sec <= 0) {
                 sec = 1;
+                boardLock = true;
             }
             //console.log(sec);
         }, 1000);
