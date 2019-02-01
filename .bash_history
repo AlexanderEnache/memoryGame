@@ -34,3 +34,10 @@ git push
 git log
 git pull
 git pull
+git pull
+git pull
+git pull
+git add .
+git commit -m "Resized elements for desktop - Alex"
+git push
+git pull

@@ -13,7 +13,7 @@ h4{
 
 .middleContainer {
     width: 100%;
-    height: 85%;
+    height: auto%;
     /*display: flex;
     align-items: center;
     justify-content: center; */
@@ -101,18 +101,18 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+	height: 100%;
     /* border: solid 2px purple; */
     }
 
     .cards {
         border: solid 1px red;
 		flex: 5;
+		height: 100%;
+		/* position: relative;
+		top: -15px; */
     }
-
-    .card {
-        border: solid 1px purple;
-		height: 135px;
-    }
+	
 /*leave this here, in case for extra text*/
     /* .left {
         display: flex;
@@ -131,8 +131,10 @@ h4 {
     }
 	
 	.deckContainer{
-		height: 635px;
+		/* height: 635px; */
+		height: 100%;
 		width: 595px;
+		margin: 0px;
 	}
 
     h4 {
@@ -141,6 +143,7 @@ h4 {
 
     .bottomContainer {
         height: 5%;
+		/* display: none; */
     }
 
     .Timer {
@@ -148,6 +151,13 @@ h4 {
         padding-top: 2px; 
     }
 	
-	.
+	.card {
+        border: solid 1px purple;
+		height: 135px;
+		width: 90px ;
+		margin: 0 auto/* 10px */;
+		margin-left: 25px;
+		margin-right: 25px;
+    }
 	
 }
