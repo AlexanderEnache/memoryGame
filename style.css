@@ -13,7 +13,7 @@ h4{
 
 .middleContainer {
     width: 100%;
-    height: auto%;
+    height: auto;
     /*display: flex;
     align-items: center;
     justify-content: center; */
@@ -106,7 +106,7 @@ h4 {
     }
 
     .cards {
-        border: solid 1px red;
+        /* border: solid 1px red; */
 		flex: 5;
 		height: 100%;
 		/* position: relative;
@@ -152,12 +152,12 @@ h4 {
     }
 	
 	.card {
-        border: solid 1px purple;
+        /* border: solid 1px purple; */
 		height: 135px;
 		width: 90px ;
 		margin: 0 auto/* 10px */;
 		margin-left: 25px;
-		margin-right: 25px;
+        margin-right: 25px;
     }
 	
 }
