@@ -5,11 +5,12 @@ $(document).ready(function () {
 
     $(".startButton").on("click", function () {
 
-        let sec = 31;
+        let sec = 60;
         let min = 0;
         let delay = sec - 2;
         let name1;
         let nameId;
+        let score = 0;
 
         let numOfCards = 0;
 
@@ -21,20 +22,35 @@ $(document).ready(function () {
 
         // Reset button resetting
         $(".resetButton").on("click", function () {
+            score = 0;
             img = randImages(imgName);
             $(".card").css("opacity", "1");
             $(".card").attr("src", "tarotBack.png");
-            sec = 31;
+            sec = 60;
             boardLock = false;
+
+            $(".death").css("opacity", "1");
+            $('.deathMessage').css("display", "none");
+            $('.deathMessage').css("color", "white");
+
+            $(".life").css("opacity", "1");
+            $('.lifeMessage').css("display", "none");
+            $('.lifeMessage').css("color", "white");
+
         });
 
-
+                                                                        /// finish reset button
         let x = setInterval(function () {
             sec = sec - 1;
             $(".Timer").html(sec);
             if (sec <= 0) {
                 sec = 1;
                 boardLock = true;
+                $(".death").css("opacity", "0.2");
+                // $(".death").attr("src", "tarotBack.png");
+                $('.deathMessage').css("display", "block");
+                $('.deathMessage').css("color", "white");
+
             }
             //console.log(sec);
         }, 1000);
@@ -65,6 +81,18 @@ $(document).ready(function () {
                         $("#" + nameId).css("opacity", "0");
                         $("#" + e.target.id).css("opacity", "0");
                         boardLock = false;
+
+                        score++;
+
+                        if(score == 8){
+                            
+                            $(".life").css("opacity", "0.2");
+                            // $(".death").attr("src", "tarotBack.png");
+                            $('.lifeMessage').css("display", "block");
+                            $('.lifeMessage').css("color", "white");
+
+                        }
+
                     } else {
                         console.log("didnt match");
                         $("#" + nameId).attr("src", "tarotBack.png");
