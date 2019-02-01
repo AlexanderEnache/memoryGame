@@ -41,3 +41,7 @@ git add .
 git commit -m "Resized elements for desktop - Alex"
 git push
 git pull
+git add .
+git commit -m "Added background audio and made card margin responsive for removal of bottom bar, it now stretches to the bottom if the bar is removed"
+gitpush
+git push
