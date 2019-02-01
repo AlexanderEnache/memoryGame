@@ -12,7 +12,6 @@
 
 
 $(document).ready(function(){
-
 	
 	let sec = 60;
 	let min = 0;
@@ -27,7 +26,14 @@ $(document).ready(function(){
 	let imgName = ["chariot.png", "hangedman.png", "heirophant.png", "empress.png", "hermit.png", "highpriestess.png", "magician.png", "moon.png"];
 
 	let img = randImages(imgName);
-	
+    
+    // Reset button resetting
+    $(".resetButton").on("click", function(){
+        img = randImages(imgName);
+        $(".card").css("opacity", "1");
+        $(".card").attr("src", "tarotBack.png");
+    });
+
 	let x = setInterval(function() {
 		sec = sec - 1;
 		//console.log(sec);
