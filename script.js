@@ -18,6 +18,7 @@ $(document).ready(function(){
 	let min = 0;
 	let delay = sec - 2;
 	let name1;
+	let nameId;
 
 	let numOfCards = 0;
 
@@ -36,24 +37,35 @@ $(document).ready(function(){
     $(".card").on("click", function(e){
 
 // Changed card from Tarot Card Back to Random Images On Click
-	   e.target.src = "Tarot Cards/" + img[e.target.id];
+	if (boardLock) return;
+	e.target.src = "Tarot Cards/" + img[e.target.id];
 
 	   numOfCards++;
 
 	   console.log(numOfCards);
 
 	   if(numOfCards == 1){
-	   	name1 = e.target.src;
+		   name1 = e.target.src;
+		   nameId = e.target.id;
 	   }
-	   $('#0').css("background-color", "rgba(2, 2, 2, 1)");
 
 	   if(numOfCards == 2){
+
+		boardLock = true; 
+
+		setTimeout(function() {
 			if(name1 == e.target.src){
 				console.log("match");
-				//$('#0').css("display", "none");
+				$("#"+ nameId).css("opacity", "0");
+				$("#" + e.target.id).css("opacity", "0");
+				boardLock = false;
 			}else{
 				console.log("didnt match");
+				$("#" + nameId).attr("src","tarotBack.png");
+				$("#" + e.target.id).attr("src", "tarotBack.png");
+				boardLock = false;
 			}
+		}, 1500);
 		numOfCards = 0;
 	   }
 
