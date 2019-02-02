@@ -52,3 +52,14 @@ git status
 git push
 git pull
 git pull
+git pull
+commit -m "what the fuck git"
+git commit -m "what the fuck git"
+git add .
+git commit -m "what the fuck git"
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
