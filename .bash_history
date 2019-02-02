@@ -63,3 +63,7 @@ git pull
 git pull
 git pull
 git pull
+git add .
+git commit -m "Added dummy script in which score bug is fixed, death card turn even after life card and click on same card bug fixed"
+git commit -m "Added dummy script in which score bug is fixed, death card turn even after life card and click on same card bug fixed and soundtrack changed"
+git push
