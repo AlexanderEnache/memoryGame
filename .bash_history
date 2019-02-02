@@ -45,3 +45,10 @@ git add .
 git commit -m "Added background audio and made card margin responsive for removal of bottom bar, it now stretches to the bottom if the bar is removed"
 gitpush
 git push
+ls
+git add .
+git commit -m "Started js, made randomizor, and timmer, not yet any print -Alex"
+git status
+git push
+git pull
+git pull
