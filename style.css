@@ -27,6 +27,7 @@ h4{
 
 .left, .right {
     display: none;
+    position: relative;
 }
 
 body {
@@ -91,6 +92,28 @@ button{
     left: 50%;
     transform: translateX(-50%);
     margin-top: 16px;
+}
+
+.lifeMessage, .deathMessage{
+
+    position:absolute;
+
+    left:50%;
+    top:40%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 45px;
+
+    display: none;
+
+}
+
+button{
+
+    background-color: #7C7760;
+    border:none;
+
 }
 
 /* Desktop layout */
