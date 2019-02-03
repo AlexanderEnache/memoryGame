@@ -82,9 +82,7 @@ $(document).ready(function () {
             }
 
             if (numOfCards == 2) {
-
                 boardLock = true;
-				
 				if (name1 == e.target.src) {
 					score++;				
 					if(score == 8){
