@@ -73,3 +73,7 @@ git push
 git add .
 git commit -m "Added dummy script in which score bug is fixed, death card turn even after life card and click on same card bug fixed"
 git push
+git add 
+git add .
+git commit -m "got rid of horizontal scroll bar: the only change was setting width of bottom bar to 97%"
+git push
