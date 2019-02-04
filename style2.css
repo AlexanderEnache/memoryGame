@@ -1,16 +1,9 @@
-
-
-/* Win screen on mobile */
+/* lkajsdflkjasdlkf */
 
 .headerContainer{
     width: 100%;
     height: 10%;
     margin: 0px;
-    
-}
-
-.winScreenMobile{
-	display: none;		
 }
 
 h4{
@@ -75,12 +68,76 @@ button{
     border-radius: 3px;
 }
 
-.card {
-    /* border: solid 1px red; */
-    height: 100px;
+.flip{
+	
+	height: 100px;
     width: 70px;
     margin: 10px;
+	
+	position:relative;
+	
 }
+
+.shift{
+	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	transform-style: preserve-3d;
+	transition: all .5s ease;
+	
+}
+
+.card {
+    /* border: solid 1px red; */
+	
+	position: absolute;
+	
+	height: 100%;
+    width: 100%;
+	margin: 0px;
+	
+	top: 0px;
+	left: 0px;
+	
+	/* transform: perspective(600px) rotateY(180deg); */
+	backface-visibility: hidden;
+	/* transition: all .5s ease; */
+	transform:rotateY(180deg);
+	
+}
+
+.back{
+	
+	position: absolute;
+	
+	height: 100%;
+    width: 100%;
+	margin: 0px;
+	
+	top: 0px;
+	left: 0px;
+	
+	/* transform: perspective(600px) rotateY(0deg); */
+	backface-visibility: hidden;
+	/* transition: all .5s ease; */
+	
+}
+
+/* .back:hover{
+	transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover{
+	transform: perspective(600px) rotateY(180deg);
+} */
+
+/* .shit:hover{
+	
+	transform: rotateY(180deg);
+	
+} */
 
 .bottomContainer {
 	position: absolute;
@@ -133,10 +190,6 @@ button{
 
 /* Desktop layout */
 @media only screen and (min-width: 480px) {
-	
-	.winScreenMobile{
-		display: none;		
-	}
 
     .left, .right {
         display: inline;
@@ -201,13 +254,22 @@ button{
         padding-top: 2px; 
     }
 	
-	.card {
-        /* border: solid 1px purple; */
+	.flip{
+		
 		height: 135px;
 		width: 90px ;
 		margin: 0 auto/* 10px */;
 		margin-left: 25px;
         margin-right: 25px;
+		
+		position:relative;
+		
+	}
+	/* transform */
+	.card {
+        /* border: solid 1px purple; */ 
+		height: 100%;
+		width: 100 %;
     }
 	
 }

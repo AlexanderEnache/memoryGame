@@ -2,7 +2,7 @@
 "use strict";
 
 
-	//////////////////		Duplicate		///////////////////
+	//////////////////		Duplicate fix for game bug ///////////////////
 
 
 $(document).ready(function () {

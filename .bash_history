@@ -77,3 +77,9 @@ git add
 git add .
 git commit -m "got rid of horizontal scroll bar: the only change was setting width of bottom bar to 97%"
 git push
+git pull
+git pull
+git commit -m "script 3 fail"
+git add .
+git commit -m "script 3 fail"
+git pull

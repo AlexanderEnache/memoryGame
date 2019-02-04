@@ -4,7 +4,9 @@
 
 	//////////////////		Duplicate fix for game bug	///////////////////
 	
-	//////////////////		Duplicate 2	fix for click dead card	///////////////////
+	//////////////////		Duplicate 2	fix for click dead card///////////////////
+	
+	//////////////////		Duplicate 3	to b paired with html2	 Flip animation///////////////////
 
 
 $(document).ready(function () {
@@ -33,8 +35,8 @@ $(document).ready(function () {
             score = 0;
 			isWin = false;
             img = randImages(imgName);
-            $(".card").css("opacity", "1");
-            $(".card").attr("src", "tarotBack.png");
+            $(".shift").css("opacity", "1");
+            // $(".card").attr("src", "tarotBack.png");
             sec = 60;
             boardLock = false;
 
@@ -81,33 +83,28 @@ $(document).ready(function () {
 		
 
         // On Click, Cards Flip to Random Images
-        $(".card").on("click", function (e) {
-
-            // Changed card from Tarot Card Back to Random Images On Click
+        $(".back").on("click", function (e) {
+			
             if (boardLock) return;
 			
-			flipCard(e.target.id, true);
-			//$("#" + e.target.id).attr("src", "Tarot Cards/" + img[e.target.id] );
+			let currentId = (e.target.id).slice(4, e.target.id.length);	
+			$(".shift"+currentId).css("transform", "rotateY(180deg)");
 			
-			if((numOfCards < 1 || nameId != e.target.id) && checkRepeat(e.target.src)){
+			if((numOfCards < 1|| nameId != currentId) && checkRepeat(currentId)){
 				numOfCards++;
 				if (numOfCards == 1) {
-					name1 = e.target.src;
-					nameId = e.target.id;
+					name1 = img[Number(currentId)];
+					nameId = currentId /* e.target.id */;
 				}
 			}
-				
-			//	console.log(nameId, e.target.id);
-			//	console.log(numOfCards);
 
             if (numOfCards == 2) {
                 boardLock = true;
-				if (name1 == e.target.src) {
+				if (name1 == img[Number(currentId)]) {
 					score++;				
 					if(score == 8){
 						isWin = true;
 						$(".life").css("opacity", "0.2");
-						// $(".death").attr("src", "tarotBack.png");
 						$('.lifeMessage').css("display", "block");
 						$('.lifeMessage').css("color", "white");
 
@@ -118,50 +115,24 @@ $(document).ready(function () {
 				numOfCards = 0;
 
                 setTimeout(function () {
-                    if (name1 == e.target.src) {
-                        //console.log("match");
-                        $("#" + nameId).css("opacity", "0");
-                        $("#" + e.target.id).css("opacity", "0");
-						repeat.push(name1);
-                        boardLock = false;
-
-                        // score++;
-
-                        /* if(score == 8){
-                            
-                            $(".life").css("opacity", "0.2");
-                            // $(".death").attr("src", "tarotBack.png");
-                            $('.lifeMessage').css("display", "block");
-                            $('.lifeMessage').css("color", "white");
-
-                        } */
-
-                    } else {
-                        //console.log("didnt match");
-                        // $("#" + nameId).attr("src", "tarotBack.png");
-                        // $("#" + e.target.id).attr("src", "tarotBack.png");
+                    if (name1 == img[Number(currentId)]) {
+                        $(".shift" + nameId).css("opacity", "0");
+                        $(".shift" + currentId).css("opacity", "0");
 						
-						flipCard(nameId, false);
-						flipCard(e.target.id, false);
-						
-                        boardLock = false;
+						repeat.push(nameId);
+						repeat.push(currentId);
+
                     }
 					
+						$(".shift"+nameId).css("transform", "rotateY(0deg)");
+						$(".shift"+currentId).css("transform", "rotateY(0deg)");
+						
+						boardLock = false;
                 }, 1500);
 				
             }
 			
         });
-		
-	function flipCard(cardId, front){
-		
-		if(front){
-			$("#" + cardId).attr("src", "Tarot Cards/" + img[cardId] );
-		}else{
-			$("#" + cardId).attr("src", "tarotBack.png" );
-		}
-		
-	}
 		
     });
 
@@ -191,10 +162,12 @@ function randImages(arr) {
         idx.splice(j, 1);
 
     }
+	
+	//$(".back").attr("src", "tarotBack.png");
 
     for (let i = 0; i < img.length; i++) {
-        //console.log(img[i]);
-    }
+		$("#"+i).attr("src", "Tarot Cards/" + img[i]);
+	}
 
     return img;
 
