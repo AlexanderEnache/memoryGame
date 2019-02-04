@@ -1,3 +1,5 @@
+<!--standard setup to link js pages and css pages  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,16 +25,23 @@
 	
 	<embed src = "backgroundSong2.mp3" autostart = "true" loop = "true" width = "0" height = "0">
 	
-    <nav class= "headerContainer">
+	<!--nav bar up top with title  -->
+	<nav class= "headerContainer">
         <h4>Ye Olde Tarot Game</h4>
-    </nav>
+	</nav>
+	
+	<!-- left display of life card and message -->
     <div class="middleContainer">
         <section class= "child left">
             <img class="life" src="Tarot Cards/temperance.png"></img> 
             <p class = "lifeMessage">Life</p>
-        </section>
+		</section>
+	<!-- class child cards, and a container to put all the cards in to keep them rectangular -->
         <section class="child cards">
             <div class="deckContainer">
+				
+			<!-- tarot cards, each div has 2 cards, so they can flip amoungst each other -->
+			<!-- 16 total cards will be in the following divs -->
 				<div class = "flip" >
 					<div class = "shift shift0">
 						<img class="card" id="0" src="tarotBack.png"></img>
@@ -152,10 +161,7 @@
         </section>
     </div>
 	
-	<!-- <div class = "winScreenMobile">
-		<img src = "tarotBack.png">
-	</div> -->
-	
+	<!-- bottom container that has play, timer, and reset button -->
     <nav class= "bottomContainer">
         <button type="reset" class="startButton">
             <i class="fas fa-play-circle"></i>
@@ -168,6 +174,7 @@
 		</button>
     </nav>
 	
+	<!-- script get linked here, jquery script and our own script file -->
 	<script src = "https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 	
     <script src="script4.js"></script>
