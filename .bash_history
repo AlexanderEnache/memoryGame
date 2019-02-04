@@ -105,3 +105,9 @@ git add .
 git commit -m "Board lock conditional"
 git push
 git push
+git add .
+git commit -m "fer"
+git push
+git push
+git push
+git pull
