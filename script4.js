@@ -34,7 +34,7 @@ $(document).ready(function () {
         $(".resetButton").on("click", function () {
             score = 0;
 			isWin = false;
-			boardLock = false;
+			boardLock = true;
 			$(".shift").css("transform", "rotateY(0deg)");
 			
 			setTimeout(function () {
@@ -42,6 +42,7 @@ $(document).ready(function () {
 				img = randImages(imgName);
 				$(".shift").css("opacity", "1");
 				sec = 60;
+				boardLock = false;
 
 				$(".death").css("opacity", "1");
 				$('.deathMessage').css("display", "none");

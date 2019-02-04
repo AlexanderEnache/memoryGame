@@ -94,3 +94,10 @@ git commit
 git add .
 git commit -m "de"
 git push
+git add .
+git commit -m "fixed single card bug"
+git push
+git add .
+git status
+git commit -m "Added delay between reset, should fix any possible shit regarding reset bugs"
+git push
