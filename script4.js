@@ -10,7 +10,7 @@
 
 
 $(document).ready(function () {
-
+	
     $(".startButton").on("click", function () {
 
         let sec = 60;
@@ -34,11 +34,12 @@ $(document).ready(function () {
         $(".resetButton").on("click", function () {
             score = 0;
 			isWin = false;
+			boardLock = false;
+			//$(".shift").css("transform", "rotateY(0deg)");
             img = randImages(imgName);
             $(".shift").css("opacity", "1");
             // $(".card").attr("src", "tarotBack.png");
             sec = 60;
-            boardLock = false;
 
             $(".death").css("opacity", "1");
             $('.deathMessage').css("display", "none");
@@ -56,8 +57,8 @@ $(document).ready(function () {
             $(".Timer").html(sec);
             if (sec <= 0) {
                 sec = 1;
-                boardLock = true;
 				if(!isWin){
+					boardLock = true;
 					$(".death").css("opacity", "0.2");
 					// $(".death").attr("src", "tarotBack.png");
 					$('.deathMessage').css("display", "block");
@@ -87,14 +88,15 @@ $(document).ready(function () {
 			
             if (boardLock) return;
 			
-			let currentId = (e.target.id).slice(4, e.target.id.length);	
+			let currentId = (e.target.id).slice(4, e.target.id.length);
+			$("#"+currentId).attr("src", "Tarot Cards/" + img[Number(currentId)]);
 			$(".shift"+currentId).css("transform", "rotateY(180deg)");
 			
 			if((numOfCards < 1|| nameId != currentId) && checkRepeat(currentId)){
 				numOfCards++;
 				if (numOfCards == 1) {
 					name1 = img[Number(currentId)];
-					nameId = currentId /* e.target.id */;
+					nameId = currentId;
 				}
 			}
 
@@ -135,15 +137,18 @@ $(document).ready(function () {
         });
 		
     });
+	
+window.onkeyup = function(e) {
+   var key = e.keyCode ? e.keyCode : e.which;
+
+   if (key == 65) {
+       $(".shift").css("transform", "rotateY(180deg)");
+   }else{
+	   $(".shift").css("transform", "rotateY(0deg)");
+   }
+}
 
 });
-
-
-//	if(sec <= delay){
-
-// 		$('.card').attr("src", "tarotBack.png");
-
-// 	}
 
 
 function randImages(arr) {

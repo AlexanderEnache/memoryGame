@@ -91,3 +91,6 @@ git commit -m "forgot to turn music back on"
 git push
 git add .
 git commit
+git add .
+git commit -m "de"
+git push
