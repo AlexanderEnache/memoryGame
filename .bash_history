@@ -101,3 +101,7 @@ git add .
 git status
 git commit -m "Added delay between reset, should fix any possible shit regarding reset bugs"
 git push
+git add .
+git commit -m "Board lock conditional"
+git push
+git push
