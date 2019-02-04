@@ -83,3 +83,11 @@ git commit -m "script 3 fail"
 git add .
 git commit -m "script 3 fail"
 git pull
+git add .
+git commit -m "Added flip functionality, fixed double click bug and timer bug"
+git push
+git add .
+git commit -m "forgot to turn music back on"
+git push
+git add .
+git commit
