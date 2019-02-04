@@ -8,9 +8,10 @@
 	
 	//////////////////		Duplicate 3	to b paired with html2	 Flip animation///////////////////
 
-
+// when the document loads the following happens
 $(document).ready(function () {
-	
+    
+    //
     $(".startButton").on("click", function () {
 
         let sec = 60;
@@ -65,7 +66,6 @@ $(document).ready(function () {
 				if(!isWin){
 					boardLock = true;
 					$(".death").css("opacity", "0.2");
-					// $(".death").attr("src", "tarotBack.png");
 					$('.deathMessage').css("display", "block");
 					$('.deathMessage').css("color", "white");
 				}
@@ -143,15 +143,15 @@ $(document).ready(function () {
 		
     });
 	 
-window.onkeyup = function(e) {
-   var key = e.keyCode ? e.keyCode : e.which;
+// window.onkeyup = function(e) {
+//    var key = e.keyCode ? e.keyCode : e.which;
 
-   if (key == 65) {
-       $(".shift").css("transform", "rotateY(180deg)");
-   }else{
-	   $(".shift").css("transform", "rotateY(0deg)");
-   }
-}
+//    if (key == 65) {
+//        $(".shift").css("transform", "rotateY(180deg)");
+//    }else{
+// 	   $(".shift").css("transform", "rotateY(0deg)");
+//    }
+// }
 
 });
 
