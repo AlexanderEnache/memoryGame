@@ -35,20 +35,25 @@ $(document).ready(function () {
             score = 0;
 			isWin = false;
 			boardLock = false;
-			//$(".shift").css("transform", "rotateY(0deg)");
-            img = randImages(imgName);
-            $(".shift").css("opacity", "1");
-            // $(".card").attr("src", "tarotBack.png");
-            sec = 60;
+			$(".shift").css("transform", "rotateY(0deg)");
+			
+			setTimeout(function () {
+			
+				img = randImages(imgName);
+				$(".shift").css("opacity", "1");
+				sec = 60;
 
-            $(".death").css("opacity", "1");
-            $('.deathMessage').css("display", "none");
-            $('.deathMessage').css("color", "white");
+				$(".death").css("opacity", "1");
+				$('.deathMessage').css("display", "none");
+				$('.deathMessage').css("color", "white");
 
-            $(".life").css("opacity", "1");
-            $('.lifeMessage').css("display", "none");
-            $('.lifeMessage').css("color", "white");
-			repeat = [];
+				$(".life").css("opacity", "1");
+				$('.lifeMessage').css("display", "none");
+				$('.lifeMessage').css("color", "white");
+				repeat = [];
+			
+			}, 1500);
+			
         });
 
                                                                         /// finish reset button
@@ -137,7 +142,7 @@ $(document).ready(function () {
         });
 		
     });
-	
+	 
 window.onkeyup = function(e) {
    var key = e.keyCode ? e.keyCode : e.which;
 
