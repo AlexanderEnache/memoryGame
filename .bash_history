@@ -114,3 +114,14 @@ git pull
 git add .
 git commit -m "ewfg"
 git push
+git add .
+git commit -m "removed the cheat code"
+git push
+git pull
+ls
+cd ..
+ls
+cd ..
+cd Labs
+pwd
+setx HOME /c/Bootcamp/Labs
