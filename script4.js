@@ -97,7 +97,7 @@ $(document).ready(function () {
 			let currentId = (e.target.id).slice(4, e.target.id.length);
 			$("#"+currentId).attr("src", "Tarot Cards/" + img[Number(currentId)]);
 			$(".shift"+currentId).css("transform", "rotateY(180deg)");
-			$("#"+currentId).css("z-index", "1");
+			// $("#"+currentId).css("z-index", "1");
 			
 			if((numOfCards < 1|| nameId != currentId) && checkRepeat(currentId)){
 				numOfCards++;
@@ -136,8 +136,8 @@ $(document).ready(function () {
 						$(".shift"+nameId).css("transform", "rotateY(0deg)");
 						$(".shift"+currentId).css("transform", "rotateY(0deg)");
 						
-						$("#"+nameId).css("z-index", "0");
-						$("#"+currentId).css("z-index", "0");
+						// $("#"+nameId).css("z-index", "0");
+						// $("#"+currentId).css("z-index", "0");
 						
 						boardLock = false;
                 }, 1500);
